@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA-SHA256 Signature Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>RSA-SHA256 Signature Generator</h2>
+        <label for="jsonBody">JSON Body:</label>
+        <textarea id="jsonBody" rows="5"></textarea>
+        
+        <label for="privateKey">Private Key:</label>
+        <textarea id="privateKey" rows="10"></textarea>
+        
+        <button onclick="generateSignature()">Generate Signature</button>
+        
+        <div class="signature-container">
+            <label for="signature">X-Hub88-Signature:</label>
+            <input type="text" id="signature" readonly>
+            <button class="copy-btn" onclick="copySignature()">Copy Signature</button>
+            <span id="copyMessage" class="copy-message"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
